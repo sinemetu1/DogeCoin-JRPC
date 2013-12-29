@@ -1,0 +1,14 @@
+language: java
+
+#env:
+    #- DOGE_COIN_RPC_USERNAME=username
+    #- DOGE_COIN_RPC_PASSWORD=password
+
+before_install: 
+    - sudo apt-get install build-essential libssl-dev libdb5.1++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev
+    - get clone git@github.com:dogecoin/dogecoin.git
+    - cd dogecoin/src/
+    - make -f makefile.unix USE_UPNP=1 USE_IPV6=1 USE_QRCODE=1
+    - ./dogecoind
+
+script: mvn test
