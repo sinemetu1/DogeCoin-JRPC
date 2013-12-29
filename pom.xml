@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://github.com/sinemetu1/DogeCoin-JRPC/blob/master/LICENSE</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    <scm>
+        <url>https://github.com/sinemetu1/DogeCoin-JRPC</url>
+        <connection>https://github.com/sinemetu1/DogeCoin-JRPC</connection>
+    </scm>
 
-    <groupId>com.dogecoin.api</groupId>
-    <artifactId>dogecoin-api</artifactId>
+    <groupId>com.dogecoin-jrpc.api</groupId>
+    <artifactId>dogecoin-jrpc</artifactId>
     <version>0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 

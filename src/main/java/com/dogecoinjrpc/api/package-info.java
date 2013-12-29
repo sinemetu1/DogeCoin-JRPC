@@ -5,4 +5,4 @@
  * @author sgarrett
  *
  */
-package com.dogecoin.api;
+package com.dogecoinjrpc.api;

@@ -1,4 +1,4 @@
-package com.dogecoin.api;
+package com.dogecoinjrpc.api;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

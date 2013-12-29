@@ -1,4 +1,4 @@
-package com.dogecoin.api;
+package com.dogecoinjrpc.api;
 
 import java.util.ArrayList;
 import java.util.List;
