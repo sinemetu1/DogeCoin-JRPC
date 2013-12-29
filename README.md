@@ -3,6 +3,8 @@ DogeCoin-JRPC
 
 A java api that wraps the dogecoind JSON-RPC api.
 
+[What's dogecoin?](http://dogecoin.com/)
+
 ![](http://i.imgur.com/KGE6WIc.png)
 
 ### Requirements:
