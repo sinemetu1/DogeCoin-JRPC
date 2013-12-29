@@ -32,3 +32,5 @@ Set environment variables used to access the `dogecoind` instance:
 - Add maven support (in progress)
 
 Feel free to create issues for feature requests or if you have any issues with the project.
+
+Donations appreciated at: `DEag5bzJ6pEKymjLhXzHeQhfNo3XBSNrHg`
