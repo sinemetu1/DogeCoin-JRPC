@@ -26,3 +26,9 @@ Set environment variables used to access the `dogecoind` instance:
 
     cd DogeCoin-JRPC/
     mvn clean test
+    
+### Improvements:
+
+- Add maven support (in progress)
+
+Feel free to create issues for feature requests or if you have any issues with the project.
