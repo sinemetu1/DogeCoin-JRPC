@@ -1,14 +1,25 @@
 language: java
 
-#env:
-    #- DOGE_COIN_RPC_USERNAME=username
-    #- DOGE_COIN_RPC_PASSWORD=password
-
 before_install: 
-    - sudo apt-get install build-essential libssl-dev libdb5.1++-dev libboost-all-dev libqrencode-dev libminiupnpc-dev
-    - get clone git@github.com:dogecoin/dogecoin.git
+    - sudo add-apt-repository -y "deb http://cz.archive.ubuntu.com/ubuntu raring main universe"
+    - sudo apt-get update
+    - sudo apt-get install build-essential libssl-dev libdb5.1++-dev libboost1.53-all-dev libqrencode-dev libminiupnpc-dev
+
+install:
+    - git clone git://github.com/dogecoin/dogecoin.git
     - cd dogecoin/src/
     - make -f makefile.unix USE_UPNP=1 USE_IPV6=1 USE_QRCODE=1
-    - ./dogecoind
+    - mkdir /home/travis/.dogecoin
+    - echo "rpcuser=dogecoinrpc" >> /home/travis/.dogecoin/dogecoin.conf
+    - echo "rpcpassword=F8RQ81wDv4bWsUjWGtV4dccwshrHX7UsLpfJrB1RkUK4" >> /home/travis/.dogecoin/dogecoin.conf
+    - cat /home/travis/.dogecoin/dogecoin.conf
+    - nohup ./dogecoind &
+
+before_script:
+    - echo "export DOGE_COIN_RPC_USERNAME=dogecoinrpc" >> /home/travis/.bash_profile
+    - echo "export DOGE_COIN_RPC_PASSWORD=F8RQ81wDv4bWsUjWGtV4dccwshrHX7UsLpfJrB1RkUK4" >> /home/travis/.bash_profile
+    - cat /home/travis/.bash_profile
+    - source /home/travis/.bash_profile
+    - cd /home/travis/build/sinemetu1/DogeCoin-JRPC
 
 script: mvn test

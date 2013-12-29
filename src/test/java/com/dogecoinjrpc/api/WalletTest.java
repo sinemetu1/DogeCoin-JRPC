@@ -104,7 +104,7 @@ public class WalletTest {
 		JSONObject result = actualJSONObject.getJSONObject("result");
         assertEquals(JSONObject.NULL, actualJSONObject.get("error"));
         assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
-		assertTrue(result.getInt("pooledtx") > 0);
+		assertTrue(result.getInt("pooledtx") >= 0);
 		assertEquals("", result.getString("errors"));
 		assertEquals(0, result.getInt("currentblocktx"));
 		assertEquals(false, result.getBoolean("generate"));
