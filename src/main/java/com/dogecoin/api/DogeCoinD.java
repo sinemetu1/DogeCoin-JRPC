@@ -57,7 +57,6 @@ public class DogeCoinD {
         	        out.append(newLine);
         	    }
         	}
-            EntityUtils.consume(httpEntity);
         } finally {
             httpclient.close();
         }
