@@ -1,7 +1,7 @@
 DogeCoin-JRPC
 =============
 
-A java rpc api that wraps dogecoind.
+A java api that wraps the dogecoind JSON-RPC api.
 
 ### Requirements:
 
