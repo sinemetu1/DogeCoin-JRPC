@@ -3,6 +3,8 @@ DogeCoin-JRPC
 
 A java api that wraps the dogecoind JSON-RPC api.
 
+![](http://i.imgur.com/KGE6WIc.png)
+
 ### Requirements:
 
 `dogecoind` [for linux](https://github.com/dogecoin/dogecoin#wow-plz-make-dogecoind) or [for OSX](https://github.com/sinemetu1/dogecoin#mac-osx)
