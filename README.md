@@ -16,6 +16,7 @@ Set environment variables used to access the `dogecoind` instance:
 
 ### Build the api:
 
+    git clone https://github.com/sinemetu1/DogeCoin-JRPC.git
     cd DogeCoin-JRPC/
     mvn clean install
 
