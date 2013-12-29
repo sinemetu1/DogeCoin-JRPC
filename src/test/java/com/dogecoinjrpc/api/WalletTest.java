@@ -40,7 +40,7 @@ public class WalletTest {
         JSONArray result = actualJSONObject.getJSONArray("result");
         for (int idx = 0; idx < result.length(); idx++) {
             JSONObject curr = result.getJSONObject(idx);
-            assertEquals(protocolVersion, curr.getInt("version"));
+            assertTrue(curr.getInt("version") > 0);
             assertEquals(0, curr.getInt("banscore"));
             curr.getBoolean("inbound"); // should be able to get
         }
@@ -101,7 +101,6 @@ public class WalletTest {
 		Wallet w = new Wallet();
 		String actual = w.getMiningInfo();
 		JSONObject actualJSONObject = new JSONObject(actual);
-        log.info("actualJSONObject:" + actualJSONObject);
 		JSONObject result = actualJSONObject.getJSONObject("result");
         assertEquals(JSONObject.NULL, actualJSONObject.get("error"));
         assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
@@ -115,5 +114,39 @@ public class WalletTest {
 		assertTrue(result.getDouble("difficulty") > 0);
 		assertTrue(result.getDouble("blocks") > 0);
 		assertTrue(result.getLong("networkhashps") > 0);
+    }
+
+    @Test
+    public void testGetRawMemPool() throws Exception {
+		Wallet w = new Wallet();
+		String actual = w.getRawMemPool();
+		JSONObject actualJSONObject = new JSONObject(actual);
+        assertEquals(JSONObject.NULL, actualJSONObject.get("error"));
+        assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
+		JSONArray result = actualJSONObject.getJSONArray("result");
+        for (int idx = 0; idx < result.length(); idx++) {
+            String pool = result.getString(idx);
+            assertTrue(!pool.equals(""));
+        }
+    }
+
+    @Test
+    public void testHelp() throws Exception {
+		Wallet w = new Wallet();
+		String actual = w.help("");
+		JSONObject actualJSONObject = new JSONObject(actual);
+        assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
+		String result = actualJSONObject.getString("result");
+        assertTrue(!result.equals(""));
+    }
+
+    @Test
+    public void testKeyPoolRefill() throws Exception {
+		Wallet w = new Wallet();
+		String actual = w.keyPoolRefill();
+		JSONObject actualJSONObject = new JSONObject(actual);
+        assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
+        assertEquals(JSONObject.NULL, actualJSONObject.get("result"));
+        assertEquals(JSONObject.NULL, actualJSONObject.get("error"));
     }
 }
