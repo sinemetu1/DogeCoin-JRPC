@@ -1,4 +1,4 @@
-package com.dogecoinjrpc.api;
+package com.github.sinemetu1;
 
 import static org.junit.Assert.*;
 
@@ -7,7 +7,7 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 import org.junit.Test;
 
-import com.dogecoinjrpc.api.Wallet;
+import com.github.sinemetu1.Wallet;
 
 public class WalletTest {
 	private static Logger log = Logger.getLogger(WalletTest.class);

@@ -5,4 +5,4 @@
  * @author sgarrett
  *
  */
-package com.dogecoinjrpc.api;
+package com.github.sinemetu1;

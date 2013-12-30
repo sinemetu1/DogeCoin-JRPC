@@ -1,4 +1,4 @@
-package com.dogecoinjrpc.api;
+package com.github.sinemetu1;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
