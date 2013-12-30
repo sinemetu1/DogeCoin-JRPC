@@ -41,7 +41,7 @@ public class WalletTest {
         for (int idx = 0; idx < result.length(); idx++) {
             JSONObject curr = result.getJSONObject(idx);
             assertTrue(curr.getInt("version") > 0);
-            assertEquals(0, curr.getInt("banscore"));
+            assertTrue(curr.getInt("banscore") >= 0);
             curr.getBoolean("inbound"); // should be able to get
         }
 	}
@@ -53,7 +53,7 @@ public class WalletTest {
 		JSONObject actualJSONObject = new JSONObject(actual);
 		assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
 		assertEquals(JSONObject.NULL, actualJSONObject.get("error"));
-		assertTrue(actualJSONObject.getInt("result") > 0);
+		assertTrue(actualJSONObject.getInt("result") >= 0);
     }
 
 	@Test
@@ -63,7 +63,7 @@ public class WalletTest {
 		JSONObject actualJSONObject = new JSONObject(actual);
 		assertEquals(JSONObject.NULL, actualJSONObject.get("error"));
 		assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
-		assertTrue(actualJSONObject.getInt("result") > 0);
+		assertTrue(actualJSONObject.getInt("result") >= 0);
     }
 
 	@Test
@@ -73,7 +73,7 @@ public class WalletTest {
 		JSONObject actualJSONObject = new JSONObject(actual);
 		assertEquals(JSONObject.NULL, actualJSONObject.get("error"));
 		assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
-		assertTrue(actualJSONObject.getInt("result") > 0);
+		assertTrue(actualJSONObject.getInt("result") >= 0);
     }
 
 	@Test
@@ -83,7 +83,7 @@ public class WalletTest {
 		JSONObject actualJSONObject = new JSONObject(actual);
 		assertEquals(JSONObject.NULL, actualJSONObject.get("error"));
 		assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
-		assertTrue(actualJSONObject.getInt("result") > 0);
+		assertTrue(actualJSONObject.getInt("result") >= 0);
     }
 
     @Test
@@ -93,7 +93,7 @@ public class WalletTest {
 		JSONObject actualJSONObject = new JSONObject(actual);
 		assertEquals(JSONObject.NULL, actualJSONObject.get("error"));
 		assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
-		assertTrue(actualJSONObject.getInt("result") == 0);
+		assertTrue(actualJSONObject.getInt("result") >= 0);
     }
 
     @Test
@@ -106,14 +106,14 @@ public class WalletTest {
         assertEquals(JSONObject.NULL, actualJSONObject.get("id"));
 		assertTrue(result.getInt("pooledtx") >= 0);
 		assertEquals("", result.getString("errors"));
-		assertEquals(0, result.getInt("currentblocktx"));
+		assertTrue(result.getInt("currentblocktx") >= 0);
 		assertEquals(false, result.getBoolean("generate"));
 		assertEquals(false, result.getBoolean("testnet"));
-		assertEquals(0, result.getInt("currentblocksize"));
-		assertEquals(0, result.getInt("hashespersec"));
-		assertTrue(result.getDouble("difficulty") > 0);
-		assertTrue(result.getDouble("blocks") > 0);
-		assertTrue(result.getLong("networkhashps") > 0);
+		assertTrue(result.getInt("currentblocksize") >= 0);
+		assertTrue(result.getInt("hashespersec") >= 0);
+		assertTrue(result.getDouble("difficulty") >= 0);
+		assertTrue(result.getDouble("blocks") >= 0);
+		assertTrue(result.getLong("networkhashps") >= 0);
     }
 
     @Test
