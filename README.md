@@ -1,7 +1,7 @@
 DogeCoin-JRPC
 =============
 
-A java api that wraps the dogecoind JSON-RPC api.  ![Build Status](https://travis-ci.org/sinemetu1/DogeCoin-JRPC.png)
+A java api that wraps the dogecoind JSON-RPC api.  [![Build Status](https://travis-ci.org/sinemetu1/DogeCoin-JRPC.png)](https://travis-ci.org/sinemetu1/DogeCoin-JRPC)
 
 [What's dogecoin?](http://dogecoin.com/)
 
