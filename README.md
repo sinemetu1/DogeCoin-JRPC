@@ -1,7 +1,7 @@
 DogeCoin-JRPC
 =============
 
-A java api that wraps the dogecoind JSON-RPC api.  ![Build Status](https://travis-ci.org/sinemetu1/DogeCoin-JRPC.png)
+A java api that wraps the dogecoind JSON-RPC api.  [![Build Status](https://travis-ci.org/sinemetu1/DogeCoin-JRPC.png)](https://travis-ci.org/sinemetu1/DogeCoin-JRPC)
 
 [What's dogecoin?](http://dogecoin.com/)
 
@@ -32,6 +32,7 @@ Set environment variables used to access the `dogecoind` instance:
 ### Improvements:
 
 - Add maven central repo support (in progress)
+- More tests
 
 Feel free to create issues for feature requests or if you have any issues with the project.
 
