@@ -11,18 +11,26 @@ A java api that wraps the dogecoind JSON-RPC api.  [![Build Status](https://trav
 
 `dogecoind` [for linux](https://github.com/dogecoin/dogecoin#wow-plz-make-dogecoind) or [for OSX](https://github.com/sinemetu1/dogecoin#mac-osx)
 
-### Configuration:
+### Maven:
 
-Set environment variables used to access the `dogecoind` instance:
-
-    export DOGE_COIN_RPC_USERNAME=dogecoinrpc
-    export DOGE_COIN_RPC_PASSWORD=YOUR_PASSWORD
+    <dependency>
+	    <groupId>com.github.sinemetu1</groupId>
+	    <artifactId>dogecoin-jrpc</artifactId>
+	    <version>0.1</version>
+    </dependency>
 
 ### Build the api:
 
     git clone https://github.com/sinemetu1/DogeCoin-JRPC.git
     cd DogeCoin-JRPC/
     mvn clean install
+    
+### Configuration:
+
+Set environment variables used to access the `dogecoind` instance:
+
+    export DOGE_COIN_RPC_USERNAME=dogecoinrpc
+    export DOGE_COIN_RPC_PASSWORD=YOUR_PASSWORD
 
 ### Test:
 
@@ -31,7 +39,6 @@ Set environment variables used to access the `dogecoind` instance:
     
 ### Improvements:
 
-- Add maven central repo support (in progress)
 - More tests
 
 Feel free to create issues for feature requests or if you have any issues with the project.
