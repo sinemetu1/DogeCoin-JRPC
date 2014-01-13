@@ -40,7 +40,7 @@ public class WalletTest {
         JSONArray result = actualJSONObject.getJSONArray("result");
         for (int idx = 0; idx < result.length(); idx++) {
             JSONObject curr = result.getJSONObject(idx);
-            assertTrue(curr.getInt("version") > 0);
+            assertTrue(curr.getInt("version") >= 0);
             assertTrue(curr.getInt("banscore") >= 0);
             curr.getBoolean("inbound"); // should be able to get
         }
