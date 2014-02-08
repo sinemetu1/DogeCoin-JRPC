@@ -442,7 +442,7 @@ public class Wallet {
     }
     
     //sendrawtransaction <hex string>
-    public String sendRawTransation(String hexString) throws Exception {
+    public String sendRawTransaction(String hexString) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "sendrawtransaction");
     	List<Object> params = new ArrayList<Object>();
