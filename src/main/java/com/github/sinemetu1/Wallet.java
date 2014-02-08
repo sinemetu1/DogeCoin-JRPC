@@ -519,10 +519,11 @@ public class Wallet {
     }
 	
     //signrawtransaction <hex string> [{"txid":txid,"vout":n,"scriptPubKey":hex},...] [<privatekey1>,...] [sighashtype="ALL"]
-	public String signRawTransaction(String transactions, String keys, String sigHashType) throws Exception {
+	public String signRawTransaction(String hex, String transactions, String keys, String sigHashType) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "signrawtransaction");
     	List<Object> params = new ArrayList<Object>();
+    	params.add(hex);
     	params.add(transactions);
     	params.add(keys);
     	params.add(sigHashType);
