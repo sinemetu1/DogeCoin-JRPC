@@ -131,7 +131,7 @@ public class Wallet {
     }
     
     //getbalance [account] [minconf=1]
-    public String getBalance(String account, String minconf) throws Exception {
+    public String getBalance(String account, int minconf) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "getbalance");
     	List<Object> params = new ArrayList<Object>();
@@ -252,7 +252,7 @@ public class Wallet {
     }
     
     //getreceivedbyaccount <account> [minconf=1]
-    public String getReceivedByAccount(String account, String minconf) throws Exception {
+    public String getReceivedByAccount(String account, int minconf) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "getreceivedbyaccount");
     	List<Object> params = new ArrayList<Object>();
@@ -263,7 +263,7 @@ public class Wallet {
     }
     
     //getreceivedbyaddress <dogecoinaddress> [minconf=1]
-    public String getReceivedByAddress(String dogecoinaddress, String minconf) throws Exception {
+    public String getReceivedByAddress(String dogecoinaddress, int minconf) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "getreceivedbyaddress");
     	List<Object> params = new ArrayList<Object>();
@@ -332,7 +332,7 @@ public class Wallet {
     }
     
     //listaccounts [minconf=1]
-    public String listAccounts(String minconf) throws Exception {
+    public String listAccounts(int minconf) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "listaccounts");
     	List<Object> params = new ArrayList<Object>();
@@ -342,7 +342,7 @@ public class Wallet {
     }
     
     //listreceivedbyaccount [minconf=1] [includeempty=false]
-    public String listReceivedByAccount(String minconf, String includeEmpty) throws Exception {
+    public String listReceivedByAccount(int minconf, String includeEmpty) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "listreceivedbyaccount");
     	List<Object> params = new ArrayList<Object>();
@@ -353,7 +353,7 @@ public class Wallet {
     }
     
     //listreceivedbyaddress [minconf=1] [includeempty=false]
-    public String listReceivedByAddress(String minconf, String includeEmpty) throws Exception {
+    public String listReceivedByAddress(int minconf, String includeEmpty) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "listreceivedbyaddress");
     	List<Object> params = new ArrayList<Object>();
@@ -387,7 +387,7 @@ public class Wallet {
     }
     
     //listunspent [minconf=1] [maxconf=999999]
-    public String listUnspent(String minconf, String maxconf) throws Exception {
+    public String listUnspent(int minconf, String maxconf) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "listunspent");
     	List<Object> params = new ArrayList<Object>();
@@ -398,7 +398,7 @@ public class Wallet {
     }
     
     //move <fromaccount> <toaccount> <amount> [minconf=1] [comment]
-    public String move(String fromAccount, String toAccount, String amount, String minconf, String comment) throws Exception {
+    public String move(String fromAccount, String toAccount, String amount, int minconf, String comment) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "move");
     	List<Object> params = new ArrayList<Object>();
@@ -413,7 +413,7 @@ public class Wallet {
     
 	// sendfrom <fromaccount> <todogecoinaddress> <amount> [minconf=1] [comment] [comment-to]
 	public String sendFrom(String fromAccount, String toDogeCoinAddress,
-			String amount, String minconf, String comment, String commentTo) throws Exception {
+			String amount, int minconf, String comment, String commentTo) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "sendfrom");
     	List<Object> params = new ArrayList<Object>();
@@ -428,7 +428,7 @@ public class Wallet {
     }
     
     //sendmany <fromaccount> {address:amount,...} [minconf=1] [comment]
-    public String sendMany(String fromaccount, JSONObject toBitcoinAddresses, String minconf,
+    public String sendMany(String fromaccount, JSONObject toBitcoinAddresses, int minconf,
     		String comment) throws Exception {
     	JSONObject jsonData = new JSONObject();
     	jsonData.put(METHOD, "sendmany");
