@@ -16,7 +16,7 @@ A java api that wraps the dogecoind JSON-RPC api.  [![Build Status](https://trav
     <dependency>
 	    <groupId>com.github.sinemetu1</groupId>
 	    <artifactId>dogecoin-jrpc</artifactId>
-	    <version>0.1</version>
+	    <version>0.2</version>
     </dependency>
 
 ### Build the api:
